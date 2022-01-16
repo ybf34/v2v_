@@ -42,7 +42,6 @@ static std::optional<std::vector<std::byte>> ReadFile(const std::string &path) {
 }
 
 
-
 int main(int argc, char *argv[]) {
 
     srand((unsigned) time(NULL));
@@ -59,6 +58,7 @@ int main(int argc, char *argv[]) {
         } else {
             osm_data = std::move(*data);
         }
+        
     }
 
     rideshare::RouteModel model{osm_data};
