@@ -16,7 +16,7 @@
 #include "map_object.h"
 #include "mapping/coordinate.h"
 #include "mapping/route_model.h"
-#include "map_object/passenger.h"
+
 
 namespace rideshare {
 
@@ -37,17 +37,14 @@ class Vehicle: public MapObject {
     int Shape() { return shape_; }
     int State() { return state_; }
     int PathIndex() { return path_index_; }
-    std::shared_ptr<Passenger> GetPassenger() { return passenger_; }
+   
     void SetState(VehicleState state) { state_ = state; }
-    void SetPassenger(std::shared_ptr<Passenger> passenger);
+
     // Override base class - also set passenger position if there is one to match vehicle
     void SetPosition(const Coordinate &position);
     // Override base class - use ResetPathAndIndex within so will get a new path and increment properly
     void SetDestination(const Coordinate &destination);
 
-    // Other functionality
-    // "Drop off" the passenger - remove the passenger and reset any failures
-    void DropOffPassenger();
     // Movement
     void IncrementalMove();
     // Increment path index by 1
@@ -57,7 +54,6 @@ class Vehicle: public MapObject {
     // Clear the path and reset path index to zero so can increment along the path properly
     void ResetPathAndIndex();
 
-    std::shared_ptr<Passenger> passenger_;
     int shape_ = DrawMarker::triangle_up;
     int state_ = VehicleState::no_passenger_requested;
     int path_index_ = 0;

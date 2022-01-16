@@ -271,7 +271,7 @@ CMakeFiles/v2v_sim.dir/src/visual/graphics.cpp.o: \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/utility.hpp \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/optim.hpp \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/ovx.hpp \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/passenger_queue.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/vehicle_manager.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__node_handle \
@@ -279,16 +279,12 @@ CMakeFiles/v2v_sim.dir/src/visual/graphics.cpp.o: \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/concurrent_object.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/thread \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/message_handler.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/simple_message.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/object_holder.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/route_model.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/coordinate.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/model.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/routing/route_planner.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/map_object.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/passenger.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/vehicle_manager.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/vehicle.h \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/imgproc.hpp \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/./imgproc/segmentation.hpp \

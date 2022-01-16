@@ -21,8 +21,6 @@
 #include <vector>
 
 #include "argparser/simple_parser.h"
-#include "concurrent/passenger_queue.h"
-#include "concurrent/ride_matcher.h"
 #include "concurrent/vehicle_manager.h"
 #include "mapping/route_model.h"
 #include "routing/route_planner.h"
@@ -76,33 +74,14 @@ int main(int argc, char *argv[]) {
     std::shared_ptr<rideshare::VehicleManager> vehicles =
       std::make_shared<rideshare::VehicleManager>(&model, route_planner, std::stoi(settings["vehicles"]));
 
-    // Create passenger queue
-    std::shared_ptr<rideshare::PassengerQueue> passengers =
-      std::make_shared<rideshare::PassengerQueue>(&model, route_planner, std::stoi(settings["passengers"]),
-                                                  std::stoi(settings["wait"]), std::stoi(settings["wait_range"]));
-
-    // Calculate the average map dimension used by the ride matcher
-    const double MAP_DIM = (std::abs(model.MaxLat() - model.MinLat()) + std::abs(model.MaxLon() - model.MinLon())) / 2.0;
-
-    // Create the ride matcher
-    std::shared_ptr<rideshare::RideMatcher> ride_matcher =
-      std::make_shared<rideshare::RideMatcher>(passengers, vehicles, MAP_DIM, settings["match"]);
-
-    // Attach ride matcher to the other two
-    vehicles->SetRideMatcher(ride_matcher);
-    passengers->SetRideMatcher(ride_matcher);
-
     // Start the simulations
-    ride_matcher->Simulate();
     vehicles->Simulate();
-    passengers->Simulate();
 
     // Draw the map
     rideshare::Graphics *graphics =
       new rideshare::Graphics(model.MinLat(), model.MinLon(), model.MaxLat(), model.MaxLon());
     std::string background_img = "../data/" + settings["map"] + ".png";
     graphics->SetBgFilename(background_img);
-    graphics->SetPassengers(passengers);
     graphics->SetVehicles(vehicles);
     graphics->Simulate();
 

@@ -30,7 +30,7 @@ Graphics::Graphics(float min_lat, float min_lon, float max_lat, float max_lon) {
 void Graphics::Simulate() {
     this->LoadBackgroundImg();
     while (true) {
-        // sleep at every iteration to reduce CPU usage
+       
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
 
         // update graphics

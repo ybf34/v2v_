@@ -235,54 +235,6 @@ src/concurrent/concurrent_object.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/concurrent_object.cpp.s
 .PHONY : src/concurrent/concurrent_object.cpp.s
 
-src/concurrent/passenger_queue.o: src/concurrent/passenger_queue.cpp.o
-.PHONY : src/concurrent/passenger_queue.o
-
-# target to build an object file
-src/concurrent/passenger_queue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/passenger_queue.cpp.o
-.PHONY : src/concurrent/passenger_queue.cpp.o
-
-src/concurrent/passenger_queue.i: src/concurrent/passenger_queue.cpp.i
-.PHONY : src/concurrent/passenger_queue.i
-
-# target to preprocess a source file
-src/concurrent/passenger_queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/passenger_queue.cpp.i
-.PHONY : src/concurrent/passenger_queue.cpp.i
-
-src/concurrent/passenger_queue.s: src/concurrent/passenger_queue.cpp.s
-.PHONY : src/concurrent/passenger_queue.s
-
-# target to generate assembly for a file
-src/concurrent/passenger_queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/passenger_queue.cpp.s
-.PHONY : src/concurrent/passenger_queue.cpp.s
-
-src/concurrent/ride_matcher.o: src/concurrent/ride_matcher.cpp.o
-.PHONY : src/concurrent/ride_matcher.o
-
-# target to build an object file
-src/concurrent/ride_matcher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/ride_matcher.cpp.o
-.PHONY : src/concurrent/ride_matcher.cpp.o
-
-src/concurrent/ride_matcher.i: src/concurrent/ride_matcher.cpp.i
-.PHONY : src/concurrent/ride_matcher.i
-
-# target to preprocess a source file
-src/concurrent/ride_matcher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/ride_matcher.cpp.i
-.PHONY : src/concurrent/ride_matcher.cpp.i
-
-src/concurrent/ride_matcher.s: src/concurrent/ride_matcher.cpp.s
-.PHONY : src/concurrent/ride_matcher.s
-
-# target to generate assembly for a file
-src/concurrent/ride_matcher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/ride_matcher.cpp.s
-.PHONY : src/concurrent/ride_matcher.cpp.s
-
 src/concurrent/vehicle_manager.o: src/concurrent/vehicle_manager.cpp.o
 .PHONY : src/concurrent/vehicle_manager.o
 
@@ -330,30 +282,6 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/map_object/passenger.o: src/map_object/passenger.cpp.o
-.PHONY : src/map_object/passenger.o
-
-# target to build an object file
-src/map_object/passenger.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/passenger.cpp.o
-.PHONY : src/map_object/passenger.cpp.o
-
-src/map_object/passenger.i: src/map_object/passenger.cpp.i
-.PHONY : src/map_object/passenger.i
-
-# target to preprocess a source file
-src/map_object/passenger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/passenger.cpp.i
-.PHONY : src/map_object/passenger.cpp.i
-
-src/map_object/passenger.s: src/map_object/passenger.cpp.s
-.PHONY : src/map_object/passenger.s
-
-# target to generate assembly for a file
-src/map_object/passenger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/passenger.cpp.s
-.PHONY : src/map_object/passenger.cpp.s
 
 src/map_object/vehicle.o: src/map_object/vehicle.cpp.o
 .PHONY : src/map_object/vehicle.o
@@ -495,21 +423,12 @@ help:
 	@echo "... src/concurrent/concurrent_object.o"
 	@echo "... src/concurrent/concurrent_object.i"
 	@echo "... src/concurrent/concurrent_object.s"
-	@echo "... src/concurrent/passenger_queue.o"
-	@echo "... src/concurrent/passenger_queue.i"
-	@echo "... src/concurrent/passenger_queue.s"
-	@echo "... src/concurrent/ride_matcher.o"
-	@echo "... src/concurrent/ride_matcher.i"
-	@echo "... src/concurrent/ride_matcher.s"
 	@echo "... src/concurrent/vehicle_manager.o"
 	@echo "... src/concurrent/vehicle_manager.i"
 	@echo "... src/concurrent/vehicle_manager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/map_object/passenger.o"
-	@echo "... src/map_object/passenger.i"
-	@echo "... src/map_object/passenger.s"
 	@echo "... src/map_object/vehicle.o"
 	@echo "... src/map_object/vehicle.i"
 	@echo "... src/map_object/vehicle.s"

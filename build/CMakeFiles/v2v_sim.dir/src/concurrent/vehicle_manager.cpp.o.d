@@ -247,11 +247,4 @@ CMakeFiles/v2v_sim.dir/src/concurrent/vehicle_manager.cpp.o: \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/model.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/routing/route_planner.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/map_object.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/passenger.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/vehicle.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/ride_matcher.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/set \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__tree \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/message_handler.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/simple_message.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/passenger_queue.h
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/vehicle.h

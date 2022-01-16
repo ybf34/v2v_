@@ -84,4 +84,4 @@ RouteModel::Node &RouteModel::FindClosestNode(const Coordinate &coordinate) {
     return SNodes()[closest_idx];
 }
 
-}  // namespace rideshare
+}
