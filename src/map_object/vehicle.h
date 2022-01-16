@@ -30,35 +30,28 @@ enum VehicleState {
 
 class Vehicle: public MapObject {
   public:
-    // Constructor / Destructor
+  
     Vehicle(double distance_per_cycle) : MapObject(distance_per_cycle) {}
 
-    // Getters / Setters
     int Shape() { return shape_; }
-    int State() { return state_; }
-    int PathIndex() { return path_index_; }
-   
-    void SetState(VehicleState state) { state_ = state; }
 
-    // Override base class - also set passenger position if there is one to match vehicle
+    int PathIndex() { return path_index_; }
+
     void SetPosition(const Coordinate &position);
-    // Override base class - use ResetPathAndIndex within so will get a new path and increment properly
     void SetDestination(const Coordinate &destination);
 
-    // Movement
     void IncrementalMove();
-    // Increment path index by 1
     void IncrementPathIndex() { ++path_index_; }
 
   private:
-    // Clear the path and reset path index to zero so can increment along the path properly
+  
     void ResetPathAndIndex();
 
-    int shape_ = DrawMarker::triangle_up;
-    int state_ = VehicleState::no_passenger_requested;
+    int puissance_radio = 5;
+    int shape_ = DrawMarker::diamond;
     int path_index_ = 0;
 };
 
-}  // namespace rideshare
+} 
 
 #endif  // VEHICLE_H_

@@ -21,10 +21,6 @@
 #include "map_object/vehicle.h"
 #include "routing/route_planner.h"
 
-// Avoid circular includes
-namespace rideshare {
-    class RideMatcher;
-}
 
 namespace rideshare {
 
@@ -46,7 +42,7 @@ class VehicleManager : public ConcurrentObject, public ObjectHolder {
     void ResetVehicleDestination(std::shared_ptr<Vehicle> vehicle, bool random);
     
     void SimpleVehicleFailure(std::shared_ptr<Vehicle> vehicle);
-
+    
     std::unordered_map<int, std::shared_ptr<Vehicle>> vehicles_;
 
     std::unordered_map<int, Coordinate> new_assignment_locations; 

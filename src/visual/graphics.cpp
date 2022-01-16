@@ -40,7 +40,7 @@ void Graphics::Simulate() {
 
 void Graphics::LoadBackgroundImg() {
     // create window
-    windowName_ = "Rideshare Simulation";
+    windowName_ = "V2V_s";
     cv::namedWindow(windowName_, cv::WINDOW_NORMAL);
 
     // load image and create copy to be used for semi-transparent overlay
@@ -76,8 +76,8 @@ void Graphics::DrawVehicles(float img_rows, float img_cols) {
         position.x = (position.x - min_lon_) / (max_lon_ - min_lon_);
         position.y = (max_lat_ - position.y) / (max_lat_ - min_lat_);
 
-        cv::Scalar color = cv::Scalar(vehicle->Blue(), vehicle->Green(), vehicle->Red());
-
+        cv::Scalar color = cv::Scalar(vehicle->Blue(),vehicle->Green(),vehicle->Red());
+       // cv::circle(images_.at(1),cv::Point((int)(position.x * img_cols),(int)(position.y * img_rows)),25,color,-1);
         cv::drawMarker(images_.at(1), cv::Point2d((int)(position.x * img_cols), (int)(position.y * img_rows)), color, vehicle->Shape(), 25, 15);
     }
 

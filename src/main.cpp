@@ -20,7 +20,6 @@
 #include <unordered_map>
 #include <vector>
 
-
 #include "concurrent/vehicle_manager.h"
 #include "mapping/route_model.h"
 #include "routing/route_planner.h"
@@ -46,8 +45,9 @@ static std::optional<std::vector<std::byte>> ReadFile(const std::string &path) {
 
 int main(int argc, char *argv[]) {
 
+    srand((unsigned) time(NULL));
 
-    // Get map data
+    int nb_vehicles = 30;
     const std::string osm_data_file = "../data/mulhouse_data.osm";
     std::vector<std::byte> osm_data;
  
@@ -63,22 +63,17 @@ int main(int argc, char *argv[]) {
 
     rideshare::RouteModel model{osm_data};
 
-    srand((unsigned) time(NULL)); // Seed random number generator
-
-    // Create a shared route planner
     std::shared_ptr<rideshare::RoutePlanner> route_planner =
       std::make_shared<rideshare::RoutePlanner>(model);
 
-    // Create vehicles
     std::shared_ptr<rideshare::VehicleManager> vehicles =
-      std::make_shared<rideshare::VehicleManager>(&model, route_planner, 10);
+      std::make_shared<rideshare::VehicleManager>(&model, route_planner, nb_vehicles);
 
-    // Start the simulations
     vehicles->Simulate();
 
-    // Draw the map
     rideshare::Graphics *graphics =
       new rideshare::Graphics(model.MinLat(), model.MinLon(), model.MaxLat(), model.MaxLon());
+
     std::string background_img = "../data/map-mulhouse.png";
     graphics->SetBgFilename(background_img);
     graphics->SetVehicles(vehicles);
@@ -86,3 +81,4 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
