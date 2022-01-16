@@ -259,6 +259,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/map_object/hexagone.o: src/map_object/hexagone.cpp.o
+.PHONY : src/map_object/hexagone.o
+
+# target to build an object file
+src/map_object/hexagone.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/hexagone.cpp.o
+.PHONY : src/map_object/hexagone.cpp.o
+
+src/map_object/hexagone.i: src/map_object/hexagone.cpp.i
+.PHONY : src/map_object/hexagone.i
+
+# target to preprocess a source file
+src/map_object/hexagone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/hexagone.cpp.i
+.PHONY : src/map_object/hexagone.cpp.i
+
+src/map_object/hexagone.s: src/map_object/hexagone.cpp.s
+.PHONY : src/map_object/hexagone.s
+
+# target to generate assembly for a file
+src/map_object/hexagone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/hexagone.cpp.s
+.PHONY : src/map_object/hexagone.cpp.s
+
+src/map_object/maillage.o: src/map_object/maillage.cpp.o
+.PHONY : src/map_object/maillage.o
+
+# target to build an object file
+src/map_object/maillage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/maillage.cpp.o
+.PHONY : src/map_object/maillage.cpp.o
+
+src/map_object/maillage.i: src/map_object/maillage.cpp.i
+.PHONY : src/map_object/maillage.i
+
+# target to preprocess a source file
+src/map_object/maillage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/maillage.cpp.i
+.PHONY : src/map_object/maillage.cpp.i
+
+src/map_object/maillage.s: src/map_object/maillage.cpp.s
+.PHONY : src/map_object/maillage.s
+
+# target to generate assembly for a file
+src/map_object/maillage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/map_object/maillage.cpp.s
+.PHONY : src/map_object/maillage.cpp.s
+
 src/map_object/vehicle.o: src/map_object/vehicle.cpp.o
 .PHONY : src/map_object/vehicle.o
 
@@ -402,6 +450,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/map_object/hexagone.o"
+	@echo "... src/map_object/hexagone.i"
+	@echo "... src/map_object/hexagone.s"
+	@echo "... src/map_object/maillage.o"
+	@echo "... src/map_object/maillage.i"
+	@echo "... src/map_object/maillage.s"
 	@echo "... src/map_object/vehicle.o"
 	@echo "... src/map_object/vehicle.i"
 	@echo "... src/map_object/vehicle.s"
