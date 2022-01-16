@@ -245,7 +245,6 @@ CMakeFiles/v2v_sim.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/vector \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/argparser/simple_parser.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/vehicle_manager.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/concurrent_object.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/thread \

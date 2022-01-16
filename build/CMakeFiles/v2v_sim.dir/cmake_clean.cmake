@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/v2v_sim.dir/src/argparser/simple_parser.cpp.o"
-  "CMakeFiles/v2v_sim.dir/src/argparser/simple_parser.cpp.o.d"
   "CMakeFiles/v2v_sim.dir/src/concurrent/concurrent_object.cpp.o"
   "CMakeFiles/v2v_sim.dir/src/concurrent/concurrent_object.cpp.o.d"
   "CMakeFiles/v2v_sim.dir/src/concurrent/vehicle_manager.cpp.o"

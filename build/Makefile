@@ -187,30 +187,6 @@ pugixml/fast:
 	$(MAKE) $(MAKESILENT) -f thirdparty/pugixml/CMakeFiles/pugixml.dir/build.make thirdparty/pugixml/CMakeFiles/pugixml.dir/build
 .PHONY : pugixml/fast
 
-src/argparser/simple_parser.o: src/argparser/simple_parser.cpp.o
-.PHONY : src/argparser/simple_parser.o
-
-# target to build an object file
-src/argparser/simple_parser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/argparser/simple_parser.cpp.o
-.PHONY : src/argparser/simple_parser.cpp.o
-
-src/argparser/simple_parser.i: src/argparser/simple_parser.cpp.i
-.PHONY : src/argparser/simple_parser.i
-
-# target to preprocess a source file
-src/argparser/simple_parser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/argparser/simple_parser.cpp.i
-.PHONY : src/argparser/simple_parser.cpp.i
-
-src/argparser/simple_parser.s: src/argparser/simple_parser.cpp.s
-.PHONY : src/argparser/simple_parser.s
-
-# target to generate assembly for a file
-src/argparser/simple_parser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/argparser/simple_parser.cpp.s
-.PHONY : src/argparser/simple_parser.cpp.s
-
 src/concurrent/concurrent_object.o: src/concurrent/concurrent_object.cpp.o
 .PHONY : src/concurrent/concurrent_object.o
 
@@ -417,9 +393,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... pugixml"
 	@echo "... v2v_sim"
-	@echo "... src/argparser/simple_parser.o"
-	@echo "... src/argparser/simple_parser.i"
-	@echo "... src/argparser/simple_parser.s"
 	@echo "... src/concurrent/concurrent_object.o"
 	@echo "... src/concurrent/concurrent_object.i"
 	@echo "... src/concurrent/concurrent_object.s"
