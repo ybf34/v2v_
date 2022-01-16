@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src -I"/Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src/*" -I/Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/thirdparty/pugixml/src -isystem /usr/local/Cellar/opencv/4.5.3_3/include/opencv4
+CXX_INCLUDES = -I/Users/yassinebenfekih/Desktop/V2V_simulation/src -I"/Users/yassinebenfekih/Desktop/V2V_simulation/src/*" -I/Users/yassinebenfekih/Desktop/V2V_simulation/thirdparty/pugixml/src -isystem /usr/local/Cellar/opencv/4.5.3_3/include/opencv4
 
 CXX_FLAGS =  -std=c++17 -pthread -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk -std=gnu++17
 

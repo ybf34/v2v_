@@ -1,6 +1,6 @@
-CMakeFiles/rideshare_simulation.dir/src/map_object/vehicle.cpp.o: \
-  /Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src/map_object/vehicle.cpp \
-  /Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src/map_object/vehicle.h \
+CMakeFiles/v2v_sim.dir/src/visual/graphics.cpp.o: \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/visual/graphics.cpp \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/visual/graphics.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/pthread.h \
@@ -161,11 +161,6 @@ CMakeFiles/rideshare_simulation.dir/src/map_object/vehicle.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/sched.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/assert.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/mutex \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__mutex_base \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/system_error \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__errc \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__string \
@@ -183,20 +178,51 @@ CMakeFiles/rideshare_simulation.dir/src/map_object/vehicle.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src/map_object/map_object.h \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/cvdef.h \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/version.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/hal/interface.h \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/emmintrin.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/xmmintrin.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/mmintrin.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/mm_malloc.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/array \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/base.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/opencv_modules.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/cvstd.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/math.h \
-  /Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src/mapping/coordinate.h \
-  /Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src/mapping/model.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/unordered_map \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__hash_table \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__node_handle \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/optional \
-  /Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src/mapping/route_model.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/iostream \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/neon_utils.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/vsx_utils.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/check.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/traits.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/matx.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/saturate.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/fast_math.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/types.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/cfloat \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/float.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include/float.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/float.h \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/mat.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/bufferpool.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/mat.inl.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/persistence.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/operations.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/cvstd.inl.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/complex \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/sstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__locale \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/mutex \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__errc \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/_locale.h \
@@ -211,8 +237,6 @@ CMakeFiles/rideshare_simulation.dir/src/map_object/vehicle.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/xlocale/_wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/xlocale/_wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/streambuf \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/istream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/nl_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/sys/types.h \
@@ -243,4 +267,31 @@ CMakeFiles/rideshare_simulation.dir/src/map_object/vehicle.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/bitset \
-  /Users/yassinebenfekih/Desktop/Rideshare-Simulation-main/src/map_object/passenger.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/istream \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/utility.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/optim.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/ovx.hpp \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/passenger_queue.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/unordered_map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__hash_table \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/optional \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/concurrent_object.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/thread \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/message_handler.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/simple_message.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/object_holder.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/route_model.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/coordinate.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/model.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/routing/route_planner.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/map_object.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/passenger.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/vehicle_manager.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/vehicle.h \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/imgproc.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/./imgproc/segmentation.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/highgui.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/imgcodecs.hpp \
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/videoio.hpp
