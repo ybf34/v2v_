@@ -20,7 +20,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "argparser/simple_parser.h"
+
 #include "concurrent/vehicle_manager.h"
 #include "mapping/route_model.h"
 #include "routing/route_planner.h"
@@ -45,11 +45,10 @@ static std::optional<std::vector<std::byte>> ReadFile(const std::string &path) {
 
 
 int main(int argc, char *argv[]) {
-    // Parse any arguments
-    std::unordered_map<std::string, std::string> settings = rideshare::SimpleParser().ParseArgs(argc, argv);
+
 
     // Get map data
-    const std::string osm_data_file = "../data/" + settings["map"] + ".osm";
+    const std::string osm_data_file = "../data/mulhouse_data.osm";
     std::vector<std::byte> osm_data;
  
     if ( osm_data.empty() && !osm_data_file.empty() ) {
@@ -72,7 +71,7 @@ int main(int argc, char *argv[]) {
 
     // Create vehicles
     std::shared_ptr<rideshare::VehicleManager> vehicles =
-      std::make_shared<rideshare::VehicleManager>(&model, route_planner, std::stoi(settings["vehicles"]));
+      std::make_shared<rideshare::VehicleManager>(&model, route_planner, 10);
 
     // Start the simulations
     vehicles->Simulate();
@@ -80,7 +79,7 @@ int main(int argc, char *argv[]) {
     // Draw the map
     rideshare::Graphics *graphics =
       new rideshare::Graphics(model.MinLat(), model.MinLon(), model.MaxLat(), model.MaxLon());
-    std::string background_img = "../data/" + settings["map"] + ".png";
+    std::string background_img = "../data/map-mulhouse.png";
     graphics->SetBgFilename(background_img);
     graphics->SetVehicles(vehicles);
     graphics->Simulate();

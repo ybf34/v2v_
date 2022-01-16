@@ -49,7 +49,6 @@ void VehicleManager::GenerateNew() {
 
 void VehicleManager::ResetVehicleDestination(std::shared_ptr<Vehicle> vehicle, bool random) {
     Coordinate destination;
-    // Depending on `random`, either get a new random position or set current destination onto nearest node
     if (random) {
         destination = model_->GetRandomMapPosition();
     } else {
@@ -60,7 +59,6 @@ void VehicleManager::ResetVehicleDestination(std::shared_ptr<Vehicle> vehicle, b
 }
 
 void VehicleManager::Simulate() {
-    // Launch Drive function in a thread
     threads.emplace_back(std::thread(&VehicleManager::Drive, this));
 }
 
@@ -105,5 +103,4 @@ void VehicleManager::SimpleVehicleFailure(std::shared_ptr<Vehicle> vehicle) {
     }
 }
 
-
-}  // namespace rideshare
+}
