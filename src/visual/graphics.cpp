@@ -78,7 +78,6 @@ void Graphics::DrawVehicles(float img_rows, float img_cols) {
 
         cv::Scalar color = cv::Scalar(vehicle->Blue(), vehicle->Green(), vehicle->Red());
 
-  
         cv::drawMarker(images_.at(1), cv::Point2d((int)(position.x * img_cols), (int)(position.y * img_rows)), color, vehicle->Shape(), 25, 15);
     }
 

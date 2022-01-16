@@ -16,11 +16,12 @@ add_subdirectory(thirdparty/pugixml)
 file(GLOB_RECURSE project_SRCS src/*.cpp src/*.h)
 
 # Add project executable
-add_executable(rideshare_simulation ${project_SRCS})
+add_executable(v2v_sim ${project_SRCS})
+
 
 # Include project directories
-target_include_directories(rideshare_simulation PUBLIC src)
-target_include_directories(rideshare_simulation PUBLIC src/*)
+target_include_directories(v2v_sim PUBLIC src)
+target_include_directories(v2v_sim PUBLIC src/*)
 
 # Link everything together
-target_link_libraries(rideshare_simulation pugixml ${OpenCV_LIBRARIES})
+target_link_libraries(v2v_sim pugixml ${OpenCV_LIBRARIES})
