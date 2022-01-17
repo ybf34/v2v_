@@ -1,12 +1,3 @@
-/**
- * @file graphics.h
- * @brief Draw vehicles and passengers on a map image.
- *
- * @cite Adapted from https://github.com/udacity/CppND-Program-a-Concurrent-Traffic-Simulation
- * @copyright Copyright (c) 2021, Michael Virgo, released under the MIT License.
- *
- */
-
 #ifndef GRAPHICS_H_
 #define GRAPHICS_H_
 
@@ -15,10 +6,10 @@
 #include <vector>
 #include <opencv2/core.hpp>
 
-#include "concurrent/vehicle_manager.h"
+#include "vehiclemanager/vehicle_manager.h"
 #include "map_object/hexagone.h"
 
-namespace rideshare {
+namespace  v2v {
 
 class Graphics {
   public:
@@ -52,6 +43,6 @@ class Graphics {
     std::vector<cv::Mat> images_;
 };
 
-}  // namespace rideshare
+}  // namespace  v2v
 
 #endif  // GRAPHICS_H_

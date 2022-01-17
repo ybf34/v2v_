@@ -187,54 +187,6 @@ pugixml/fast:
 	$(MAKE) $(MAKESILENT) -f thirdparty/pugixml/CMakeFiles/pugixml.dir/build.make thirdparty/pugixml/CMakeFiles/pugixml.dir/build
 .PHONY : pugixml/fast
 
-src/concurrent/concurrent_object.o: src/concurrent/concurrent_object.cpp.o
-.PHONY : src/concurrent/concurrent_object.o
-
-# target to build an object file
-src/concurrent/concurrent_object.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/concurrent_object.cpp.o
-.PHONY : src/concurrent/concurrent_object.cpp.o
-
-src/concurrent/concurrent_object.i: src/concurrent/concurrent_object.cpp.i
-.PHONY : src/concurrent/concurrent_object.i
-
-# target to preprocess a source file
-src/concurrent/concurrent_object.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/concurrent_object.cpp.i
-.PHONY : src/concurrent/concurrent_object.cpp.i
-
-src/concurrent/concurrent_object.s: src/concurrent/concurrent_object.cpp.s
-.PHONY : src/concurrent/concurrent_object.s
-
-# target to generate assembly for a file
-src/concurrent/concurrent_object.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/concurrent_object.cpp.s
-.PHONY : src/concurrent/concurrent_object.cpp.s
-
-src/concurrent/vehicle_manager.o: src/concurrent/vehicle_manager.cpp.o
-.PHONY : src/concurrent/vehicle_manager.o
-
-# target to build an object file
-src/concurrent/vehicle_manager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/vehicle_manager.cpp.o
-.PHONY : src/concurrent/vehicle_manager.cpp.o
-
-src/concurrent/vehicle_manager.i: src/concurrent/vehicle_manager.cpp.i
-.PHONY : src/concurrent/vehicle_manager.i
-
-# target to preprocess a source file
-src/concurrent/vehicle_manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/vehicle_manager.cpp.i
-.PHONY : src/concurrent/vehicle_manager.cpp.i
-
-src/concurrent/vehicle_manager.s: src/concurrent/vehicle_manager.cpp.s
-.PHONY : src/concurrent/vehicle_manager.s
-
-# target to generate assembly for a file
-src/concurrent/vehicle_manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/concurrent/vehicle_manager.cpp.s
-.PHONY : src/concurrent/vehicle_manager.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -403,6 +355,54 @@ src/routing/route_planner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/routing/route_planner.cpp.s
 .PHONY : src/routing/route_planner.cpp.s
 
+src/vehiclemanager/concurrent_object.o: src/vehiclemanager/concurrent_object.cpp.o
+.PHONY : src/vehiclemanager/concurrent_object.o
+
+# target to build an object file
+src/vehiclemanager/concurrent_object.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/vehiclemanager/concurrent_object.cpp.o
+.PHONY : src/vehiclemanager/concurrent_object.cpp.o
+
+src/vehiclemanager/concurrent_object.i: src/vehiclemanager/concurrent_object.cpp.i
+.PHONY : src/vehiclemanager/concurrent_object.i
+
+# target to preprocess a source file
+src/vehiclemanager/concurrent_object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/vehiclemanager/concurrent_object.cpp.i
+.PHONY : src/vehiclemanager/concurrent_object.cpp.i
+
+src/vehiclemanager/concurrent_object.s: src/vehiclemanager/concurrent_object.cpp.s
+.PHONY : src/vehiclemanager/concurrent_object.s
+
+# target to generate assembly for a file
+src/vehiclemanager/concurrent_object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/vehiclemanager/concurrent_object.cpp.s
+.PHONY : src/vehiclemanager/concurrent_object.cpp.s
+
+src/vehiclemanager/vehicle_manager.o: src/vehiclemanager/vehicle_manager.cpp.o
+.PHONY : src/vehiclemanager/vehicle_manager.o
+
+# target to build an object file
+src/vehiclemanager/vehicle_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/vehiclemanager/vehicle_manager.cpp.o
+.PHONY : src/vehiclemanager/vehicle_manager.cpp.o
+
+src/vehiclemanager/vehicle_manager.i: src/vehiclemanager/vehicle_manager.cpp.i
+.PHONY : src/vehiclemanager/vehicle_manager.i
+
+# target to preprocess a source file
+src/vehiclemanager/vehicle_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/vehiclemanager/vehicle_manager.cpp.i
+.PHONY : src/vehiclemanager/vehicle_manager.cpp.i
+
+src/vehiclemanager/vehicle_manager.s: src/vehiclemanager/vehicle_manager.cpp.s
+.PHONY : src/vehiclemanager/vehicle_manager.s
+
+# target to generate assembly for a file
+src/vehiclemanager/vehicle_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/v2v_sim.dir/build.make CMakeFiles/v2v_sim.dir/src/vehiclemanager/vehicle_manager.cpp.s
+.PHONY : src/vehiclemanager/vehicle_manager.cpp.s
+
 src/visual/graphics.o: src/visual/graphics.cpp.o
 .PHONY : src/visual/graphics.o
 
@@ -441,12 +441,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... pugixml"
 	@echo "... v2v_sim"
-	@echo "... src/concurrent/concurrent_object.o"
-	@echo "... src/concurrent/concurrent_object.i"
-	@echo "... src/concurrent/concurrent_object.s"
-	@echo "... src/concurrent/vehicle_manager.o"
-	@echo "... src/concurrent/vehicle_manager.i"
-	@echo "... src/concurrent/vehicle_manager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -468,6 +462,12 @@ help:
 	@echo "... src/routing/route_planner.o"
 	@echo "... src/routing/route_planner.i"
 	@echo "... src/routing/route_planner.s"
+	@echo "... src/vehiclemanager/concurrent_object.o"
+	@echo "... src/vehiclemanager/concurrent_object.i"
+	@echo "... src/vehiclemanager/concurrent_object.s"
+	@echo "... src/vehiclemanager/vehicle_manager.o"
+	@echo "... src/vehiclemanager/vehicle_manager.i"
+	@echo "... src/vehiclemanager/vehicle_manager.s"
 	@echo "... src/visual/graphics.o"
 	@echo "... src/visual/graphics.i"
 	@echo "... src/visual/graphics.s"

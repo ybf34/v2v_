@@ -1,31 +1,24 @@
-
-
 #include <math.h>
 #include "hexagone.h"
 #include "point.h"
 #include "vehicle.h"
 
-namespace rideshare {
+namespace  v2v {
 
 void Hexagon::calculateVertices(int s){
-
     int a = sqrt(3)*(s/2);
-
     this->sommets.push_back(Point(this->getX(), this->getY() - s));
     this->sommets.push_back(Point(this->getX() + a, this->getY() - (s/2)));
     this->sommets.push_back(Point(this->getX() + a,this->getY() + (s/2)));
     this->sommets.push_back(Point(this->getX(), this->getY() + s));
     this->sommets.push_back(Point(this->getX() - a, this->getY() + (s/2)));
     this->sommets.push_back(Point(this->getX() - a, this->getY() - (s/2)));
-
-    }
+}
 
 bool Hexagon::InsideHexagon(double testX, double testY)
 {
     int v = 6;
 	bool c = false;
-
-
 	for (int i = 0, j = v - 1; i < v; j = i++)
 	{
 		if (((sommets[i].d_y > testY) != (sommets[j].d_y > testY))

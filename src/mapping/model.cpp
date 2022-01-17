@@ -12,7 +12,7 @@
 
 #include "coordinate.h"
 
-namespace rideshare {
+namespace  v2v {
 
 // Only need road types (and no footways)
 static Model::Road::Type String2RoadType(std::string_view type) {

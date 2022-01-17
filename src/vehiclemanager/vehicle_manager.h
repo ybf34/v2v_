@@ -1,11 +1,3 @@
-/**
- * @file vehicle_manager.h
- * @brief Handles generation of and driving of vehicles around the map.
- *
- * @copyright Copyright (c) 2021, Michael Virgo, released under the MIT License.
- *
- */
-
 #ifndef VEHICLE_MANAGER_H_
 #define VEHICLE_MANAGER_H_
 
@@ -14,7 +6,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "concurrent_object.h"
+#include "vehiclemanager/concurrent_object.h"
 #include "object_holder.h"
 #include "mapping/coordinate.h"
 #include "mapping/route_model.h"
@@ -23,7 +15,7 @@
 #include "map_object/maillage.h"
 
 
-namespace rideshare {
+namespace  v2v {
 
 class VehicleManager : public ConcurrentObject, public ObjectHolder {
   public:

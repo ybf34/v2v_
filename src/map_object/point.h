@@ -1,7 +1,7 @@
 #ifndef POINT_H
 #define POINT_H
 
-namespace rideshare {
+namespace  v2v {
 
 class Point{
   

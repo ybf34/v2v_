@@ -1,19 +1,11 @@
-/**
- * @file route_model.cpp
- * @brief Implementation for finding map node neighbors and closest nodes to a point.
- *
- * @cite Adapted from https://github.com/udacity/CppND-Route-Planning-Project
- *
- */
 
 #include "route_model.h"
 
 #include <iostream>
 
-namespace rideshare {
+namespace  v2v {
 
 RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
-    // Create RouteModel nodes.
     int counter = 0;
     for (Model::Node node : this->Nodes()) {
         nodes_.emplace_back(Node(counter, this, node));

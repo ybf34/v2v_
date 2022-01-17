@@ -271,15 +271,15 @@ CMakeFiles/v2v_sim.dir/src/visual/graphics.cpp.o: \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/utility.hpp \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/optim.hpp \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/ovx.hpp \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/vehicle_manager.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/vehiclemanager/vehicle_manager.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/optional \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/concurrent_object.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/vehiclemanager/concurrent_object.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/thread \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/concurrent/object_holder.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/vehiclemanager/object_holder.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/route_model.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/coordinate.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/model.h \

@@ -12,7 +12,7 @@
 #include "mapping/route_model.h"
 #include "map_object/map_object.h"
 
-namespace rideshare {
+namespace  v2v {
 
 class RoutePlanner {
   public:
@@ -41,6 +41,6 @@ class RoutePlanner {
     RouteModel::Node *NextNode();
 };
 
-}  // namespace rideshare
+} 
 
 #endif  // ROUTE_PLANNER_H_

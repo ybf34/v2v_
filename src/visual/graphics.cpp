@@ -10,7 +10,7 @@
 #include "map_object/hexagone.h"
 #include "mapping/coordinate.h"
 
-namespace rideshare {
+namespace  v2v {
 
 Graphics::Graphics(float min_lat, float min_lon, float max_lat, float max_lon) {
     min_lat_ = min_lat;
@@ -97,10 +97,8 @@ void Graphics::DrawVehicles(float img_rows, float img_cols) {
 
         vehicle_manager_->checkVehicleInHexagons(*vehicle);
          
-       cv::circle(images_.at(1),cv::Point((int)(position.x * img_cols),(int)(position.y * img_rows)),100,cv::Scalar(225,105,65),5);
-       cv::circle(images_.at(1),cv::Point((int)(position.x * img_cols),(int)(position.y * img_rows)),15,color,-1);
-
-        //cv::drawMarker(images_.at(1), cv::Point2d((int)(position.x * img_cols), (int)(position.y * img_rows)), color, vehicle->Shape(), 25, 15);
+       cv::circle(images_.at(1),cv::Point((int)(position.x * img_cols),(int)(position.y * img_rows)),vehicle->radio_wave*10,cv::Scalar(225,105,65),2);
+       cv::circle(images_.at(1),cv::Point((int)(position.x * img_cols),(int)(position.y * img_rows)),17,color,-1);
     }
 
     float opacity = 0.85;

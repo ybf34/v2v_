@@ -1,14 +1,13 @@
 #ifndef HEXAGON_H_
 #define HEXAGON_H_
 
-
 #include <memory>
 #include <mutex>
 #include <vector>
 #include "point.h"
 #include "vehicle.h"
 
-namespace rideshare {
+namespace  v2v {
 
 class Hexagon{
  

@@ -1,15 +1,9 @@
-/**
- * @file vehicle_manager.cpp
- * @brief Implementation of generating vehicles and driving them around the map.
- *
- * @copyright Copyright (c) 2021, Michael Virgo, released under the MIT License.
- *
- */
 
-#include "vehicle_manager.h"
 
 #include <memory>
 
+#include "vehiclemanager/vehicle_manager.h"
+#include "vehiclemanager/concurrent_object.h"
 #include "mapping/coordinate.h"
 #include "mapping/route_model.h"
 #include "map_object/vehicle.h"
@@ -17,11 +11,11 @@
 #include "map_object/maillage.h"
 #include "map_object/hexagone.h"
 #include "mapping/model.h"
-namespace rideshare {
+namespace  v2v {
 
 VehicleManager::VehicleManager(RouteModel *model,
                                std::shared_ptr<RoutePlanner> route_planner,
-                               int max_objects) : maillage(90,-10,-10), ObjectHolder(model, route_planner, max_objects) {
+                               int max_objects) : maillage(100,20,20), ObjectHolder(model, route_planner, max_objects) {
 
 
     distance_per_cycle_ = std::abs(model_->MaxLat() - model->MinLat()) / 1000.0;
@@ -68,11 +62,7 @@ void VehicleManager::SimpleVehicleFailure(std::shared_ptr<Vehicle> vehicle) {
 
     bool remove = vehicle->MovementFailure();
     if (remove) {
-      
         to_remove_.emplace_back(vehicle->Id());
-
-        std::lock_guard<std::mutex> lck(mtx_);
-        std::cout << "Vehicle #" << vehicle->Id() <<" is stuck, leaving map." << std::endl;
     } else {
        
         ResetVehicleDestination(vehicle, true);
@@ -122,14 +112,12 @@ void VehicleManager::checkVehicleInHexagons(Vehicle v){
     for (auto& line: this->maillage.hex_grid) {
         for (auto& hex: line) {
 
-
         Coordinate position = v.GetPosition();
 
         float x  = (position.x - 7.32477) / (7.34997 - 7.32477);
         float y = (47.7516 - position.y) / (47.7516 - 47.7421);
 
        bool inside =  hex.InsideHexagon(x*2358,y*1322);
-
 
        if(inside==true){
            hex.marque();

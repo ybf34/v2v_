@@ -1,10 +1,3 @@
-/**
- * @file model.h
- * @brief Process & store information from OpenStreetMap data, as well as getting a random map position.
- *
- * @cite Adapted from https://github.com/udacity/CppND-Route-Planning-Project
- *
- */
 
 #ifndef MODEL_H_
 #define MODEL_H_
@@ -16,7 +9,7 @@
 
 #include "coordinate.h"
 
-namespace rideshare {
+namespace  v2v {
 
 class Model {
   public:
@@ -35,11 +28,10 @@ class Model {
         int way;
         Type type;
     };  
-    
-    // Constructor
+   
     Model( const std::vector<std::byte> &xml );
     
-    // Getters
+   
     auto MetricScale() const noexcept { return metric_scale_; }    
     
     auto &Nodes() const noexcept { return nodes_; }
@@ -50,11 +42,11 @@ class Model {
     auto &MinLon() const noexcept { return min_lon_; }
     auto &MaxLon() const noexcept { return max_lon_; }
 
-    // Return a random position from within the map coordinates
+   
     Coordinate GetRandomMapPosition() const noexcept;
     
   private:
-    // Load OSM XML data file
+
     void LoadData(const std::vector<std::byte> &xml);
     
     std::vector<Node> nodes_;
@@ -68,6 +60,6 @@ class Model {
     double metric_scale_ = 1.f;
 };
 
-}  // namespace rideshare
+} 
 
-#endif  // MODEL_H_
+#endif  

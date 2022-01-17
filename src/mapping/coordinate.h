@@ -2,7 +2,7 @@
 #ifndef COORDINATE_H_
 #define COORDINATE_H_
 
-namespace rideshare {
+namespace  v2v {
 
 struct Coordinate {
     double x;
@@ -13,6 +13,6 @@ struct Coordinate {
     }
 };
 
-}  // namespace rideshare
+}  // namespace  v2v
 
 #endif  // COORDINATE_H_
