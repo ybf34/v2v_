@@ -16,7 +16,7 @@
 #include <opencv2/core.hpp>
 
 #include "concurrent/vehicle_manager.h"
-
+#include "map_object/hexagone.h"
 
 namespace rideshare {
 
@@ -33,16 +33,17 @@ class Graphics {
     void Simulate();
 
   private:
-    // Load the given OSM tile image
-    void LoadBackgroundImg();
-    // Loop to draw desired objects on OSM tile
-    void DrawSimulation();
-    // Draw waiting passengers onto the image
     
-    // Draw all vehicles on the image
+    void LoadBackgroundImg();
+    
+    void DrawSimulation();
+
+    void DrawHexagon(Hexagon h1);
+
+    void DrawMaillage();
+    
     void DrawVehicles(float img_rows, float img_cols);
 
-    // Member variables
     float min_lat_, min_lon_, max_lat_, max_lon_;
     std::shared_ptr<VehicleManager> vehicle_manager_;
    

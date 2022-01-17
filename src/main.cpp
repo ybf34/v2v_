@@ -24,6 +24,7 @@
 #include "mapping/route_model.h"
 #include "routing/route_planner.h"
 #include "visual/graphics.h"
+#include "map_object/hexagone.h"
 
 static std::optional<std::vector<std::byte>> ReadFile(const std::string &path) {   
     std::ifstream is{path, std::ios::binary | std::ios::ate};
@@ -44,9 +45,11 @@ static std::optional<std::vector<std::byte>> ReadFile(const std::string &path) {
 
 int main(int argc, char *argv[]) {
 
+    
     srand((unsigned) time(NULL));
 
     int nb_vehicles = 30;
+    
     const std::string osm_data_file = "../data/mulhouse_data.osm";
     std::vector<std::byte> osm_data;
  
@@ -78,6 +81,7 @@ int main(int argc, char *argv[]) {
     graphics->SetBgFilename(background_img);
     graphics->SetVehicles(vehicles);
     graphics->Simulate();
+   
 
     return 0;
 }
