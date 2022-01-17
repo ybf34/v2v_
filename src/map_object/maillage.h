@@ -13,7 +13,7 @@ class Maillage{
 
     int s,maxI,maxJ;
 
-    Hexagon **hex_grid;
+
     //Maillage(int s_,int maxi,int maxj) : hex_grid{},s(s_),maxI(maxi),maxJ(maxj) {}
     Maillage(int s_,int maxi,int maxj);
 

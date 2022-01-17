@@ -9,12 +9,8 @@ namespace rideshare{
 Maillage::Maillage(int s_,int maxi,int maxj){
     this->s=s_;
     this->maxI=maxi;
-    this->maxJ=maxj;
-
-    hex_grid = new Hexagon * [20]();    
-   /* for (int i=0; i<20; i++){
-        hex_grid[i] = new Hexagon[20]();                    
-    }*/
+    this->maxJ=maxj;   
+   this->hex_grid.resize(maxI,std::vector<Hexagon>(maxJ));
 }
 
 void Maillage::createMaillage(int s){
