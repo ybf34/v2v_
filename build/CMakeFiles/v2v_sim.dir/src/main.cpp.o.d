@@ -292,4 +292,6 @@ CMakeFiles/v2v_sim.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include/c++/v1/sstream \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/utility.hpp \
   /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/optim.hpp \
-  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/ovx.hpp
+  /usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/core/ovx.hpp \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/hexagone.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/point.h
