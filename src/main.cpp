@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
     
     srand((unsigned) time(NULL));
 
-    int nb_vehicles = 30;
+    int nb_vehicles = 1;
     
     const std::string osm_data_file = "../data/mulhouse_data.osm";
     std::vector<std::byte> osm_data;

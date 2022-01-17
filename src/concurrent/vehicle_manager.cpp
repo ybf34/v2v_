@@ -14,12 +14,15 @@
 #include "mapping/route_model.h"
 #include "map_object/vehicle.h"
 #include "routing/route_planner.h"
+#include "map_object/maillage.h"
+#include "map_object/hexagone.h"
 
 namespace rideshare {
 
 VehicleManager::VehicleManager(RouteModel *model,
                                std::shared_ptr<RoutePlanner> route_planner,
-                               int max_objects) : ObjectHolder(model, route_planner, max_objects) {
+                               int max_objects) : maillage(90,-10,-10), ObjectHolder(model, route_planner, max_objects) {
+
 
     distance_per_cycle_ = std::abs(model_->MaxLat() - model->MinLat()) / 1000.0;
 
@@ -44,7 +47,6 @@ void VehicleManager::GenerateNew() {
     vehicles_.emplace(vehicle->Id(), vehicle);
 
     std::lock_guard<std::mutex> lck(mtx_);
-    std::cout << "Vehicle #" << idCnt_ - 1 << " now driving from: " << nearest_start.y << ", " << nearest_start.x << "." << std::endl;
 }
 
 void VehicleManager::ResetVehicleDestination(std::shared_ptr<Vehicle> vehicle, bool random) {
@@ -63,17 +65,16 @@ void VehicleManager::Simulate() {
 }
 
 void VehicleManager::SimpleVehicleFailure(std::shared_ptr<Vehicle> vehicle) {
-    // Note: This should only be called when vehicle has not yet picked up a passenger
-    // Check if enough failures to delete
+
     bool remove = vehicle->MovementFailure();
     if (remove) {
-        // Plan to erase the vehicle
+      
         to_remove_.emplace_back(vehicle->Id());
-        // Note to console
+
         std::lock_guard<std::mutex> lck(mtx_);
         std::cout << "Vehicle #" << vehicle->Id() <<" is stuck, leaving map." << std::endl;
     } else {
-        // Try a new route
+       
         ResetVehicleDestination(vehicle, true);
     }
 }
@@ -104,15 +105,32 @@ void VehicleManager::Drive() {
                
                 vehicles_.erase(id);
             }
-            // Clear the to_remove_ vector for next time
+    
             to_remove_.clear();
         }
 
-        // Make sure to keep max vehicles on the road
         if (vehicles_.size() < MAX_OBJECTS_) {
             GenerateNew();
         }
     }
+}
+
+
+void VehicleManager::checkVehicleInHexagons(Vehicle v){
+    
+    for (auto& line: this->maillage.hex_grid) {
+        for (auto& hex: line) {
+        Coordinate position = v.GetPosition();
+    
+       bool inside =  hex.InsideHexagon(position.x,position.y);
+
+       if(inside==true){
+           std::cout<< "bonjour" << std::endl;
+       }
+
+    }
+    }
+
 }
 
 

@@ -20,6 +20,7 @@
 #include "mapping/route_model.h"
 #include "map_object/vehicle.h"
 #include "routing/route_planner.h"
+#include "map_object/maillage.h"
 
 
 namespace rideshare {
@@ -27,10 +28,13 @@ namespace rideshare {
 class VehicleManager : public ConcurrentObject, public ObjectHolder {
   public:
 
+    Maillage maillage;
+
     VehicleManager(RouteModel *model, std::shared_ptr<RoutePlanner> route_planner, int max_objects);
     
     const std::unordered_map<int, std::shared_ptr<Vehicle>>& Vehicles() { return vehicles_; }
     
+    void checkVehicleInHexagons(Vehicle v);
     void Simulate();
 
   private:
@@ -45,11 +49,12 @@ class VehicleManager : public ConcurrentObject, public ObjectHolder {
     
     std::unordered_map<int, std::shared_ptr<Vehicle>> vehicles_;
 
+   
     std::unordered_map<int, Coordinate> new_assignment_locations; 
     std::vector<int> to_remove_; 
 
 };
 
-}  // namespace rideshare
+} 
 
 #endif // VEHICLE_MANAGER_H_

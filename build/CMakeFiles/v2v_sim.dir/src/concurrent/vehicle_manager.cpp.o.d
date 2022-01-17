@@ -247,4 +247,7 @@ CMakeFiles/v2v_sim.dir/src/concurrent/vehicle_manager.cpp.o: \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/mapping/model.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/routing/route_planner.h \
   /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/map_object.h \
-  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/vehicle.h
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/vehicle.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/maillage.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/hexagone.h \
+  /Users/yassinebenfekih/Desktop/V2V_simulation/src/map_object/point.h

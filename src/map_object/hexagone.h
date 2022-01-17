@@ -21,6 +21,7 @@ class Hexagon{
     Hexagon(int x,int y,int i_,int j_) : sommets(),center(Point(x,y)),i(i_),j(j_) {}
     Hexagon();
     
+    bool InsideHexagon(double x, double y);
     void setCenter(int x,int y){ center.d_x=x; center.d_y=y;}
     void calculateVertices(int s);
 

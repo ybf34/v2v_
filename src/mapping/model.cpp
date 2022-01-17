@@ -98,4 +98,4 @@ void Model::LoadData(const std::vector<std::byte> &xml) {
     }
 }
 
-}  // namespace rideshare
+} 

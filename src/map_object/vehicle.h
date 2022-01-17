@@ -20,13 +20,6 @@
 
 namespace rideshare {
 
-enum VehicleState {
-    no_passenger_requested,
-    no_passenger_queued,
-    passenger_queued,
-    waiting,
-    driving_passenger,
-};
 
 class Vehicle: public MapObject {
   public:
