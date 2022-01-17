@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
     
     srand((unsigned) time(NULL));
 
-    int nb_vehicles = 1;
+    int nb_vehicles = 2;
     
     const std::string osm_data_file = "../data/mulhouse_data.osm";
     std::vector<std::byte> osm_data;
@@ -77,6 +77,8 @@ int main(int argc, char *argv[]) {
     rideshare::Graphics *graphics =
       new rideshare::Graphics(model.MinLat(), model.MinLon(), model.MaxLat(), model.MaxLon());
 
+
+  
     std::string background_img = "../data/map-mulhouse.png";
     graphics->SetBgFilename(background_img);
     graphics->SetVehicles(vehicles);

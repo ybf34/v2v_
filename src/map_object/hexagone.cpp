@@ -3,7 +3,7 @@
 #include <math.h>
 #include "hexagone.h"
 #include "point.h"
-
+#include "vehicle.h"
 
 namespace rideshare {
 
@@ -33,6 +33,16 @@ bool Hexagon::InsideHexagon(double testX, double testY)
 			c = !c;
 	}
 	return c;
+}
+
+
+void Hexagon::addVehicle(Vehicle v){
+    this->vehicles.push_back(v);
+}
+
+void Hexagon::removeVehicle(Vehicle v){
+    this->marqueb =false;
+    this->vehicles.clear();
 }
 
 }

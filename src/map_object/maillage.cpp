@@ -23,12 +23,5 @@ void Maillage::createMaillage(){
   }
 }
 
-void Maillage::addVehicle(Vehicle v){
-    this->vehicles.push_back(v);
-}
-
-void Maillage::removeVehicle(Vehicle v){
-    this->vehicles.clear();
-}
 
 }

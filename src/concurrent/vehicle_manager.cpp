@@ -16,7 +16,7 @@
 #include "routing/route_planner.h"
 #include "map_object/maillage.h"
 #include "map_object/hexagone.h"
-
+#include "mapping/model.h"
 namespace rideshare {
 
 VehicleManager::VehicleManager(RouteModel *model,
@@ -117,15 +117,26 @@ void VehicleManager::Drive() {
 
 
 void VehicleManager::checkVehicleInHexagons(Vehicle v){
-    
+
+       
     for (auto& line: this->maillage.hex_grid) {
         for (auto& hex: line) {
+
+
         Coordinate position = v.GetPosition();
-    
-       bool inside =  hex.InsideHexagon(position.x,position.y);
+
+        float x  = (position.x - 7.32477) / (7.34997 - 7.32477);
+        float y = (47.7516 - position.y) / (47.7516 - 47.7421);
+
+       bool inside =  hex.InsideHexagon(x*2358,y*1322);
+
 
        if(inside==true){
-           std::cout<< "bonjour" << std::endl;
+           hex.marque();
+           hex.addVehicle(v);
+       }
+       else{
+           hex.removeVehicle(v);
        }
 
     }

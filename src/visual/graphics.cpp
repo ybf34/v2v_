@@ -68,12 +68,21 @@ void Graphics::DrawMaillage(){
 
 void Graphics::DrawHexagon(Hexagon h1){
 
+if(h1.marqueb==false){
     cv::line(images_.at(1),cv::Point(h1.sommets[0].d_x,h1.sommets[0].d_y),cv::Point(h1.sommets[1].d_x,h1.sommets[1].d_y),cv::Scalar(0,0,0),2);
     cv::line(images_.at(1),cv::Point(h1.sommets[5].d_x,h1.sommets[5].d_y),cv::Point(h1.sommets[0].d_x,h1.sommets[0].d_y),cv::Scalar(0,0,0),2);
     cv::line(images_.at(1),cv::Point(h1.sommets[4].d_x,h1.sommets[4].d_y),cv::Point(h1.sommets[5].d_x,h1.sommets[5].d_y),cv::Scalar(0,0,0),2);
     cv::line(images_.at(1),cv::Point(h1.sommets[3].d_x,h1.sommets[3].d_y),cv::Point(h1.sommets[4].d_x,h1.sommets[4].d_y),cv::Scalar(0,0,0),2);
     cv::line(images_.at(1),cv::Point(h1.sommets[2].d_x,h1.sommets[2].d_y),cv::Point(h1.sommets[3].d_x,h1.sommets[3].d_y),cv::Scalar(0,0,0),2);
     cv::line(images_.at(1),cv::Point(h1.sommets[1].d_x,h1.sommets[1].d_y),cv::Point(h1.sommets[2].d_x,h1.sommets[2].d_y),cv::Scalar(0,0,0),2);
+}else {
+    cv::line(images_.at(1),cv::Point(h1.sommets[0].d_x,h1.sommets[0].d_y),cv::Point(h1.sommets[1].d_x,h1.sommets[1].d_y),cv::Scalar(0,0,255),2);
+    cv::line(images_.at(1),cv::Point(h1.sommets[5].d_x,h1.sommets[5].d_y),cv::Point(h1.sommets[0].d_x,h1.sommets[0].d_y),cv::Scalar(0,0,255),2);
+    cv::line(images_.at(1),cv::Point(h1.sommets[4].d_x,h1.sommets[4].d_y),cv::Point(h1.sommets[5].d_x,h1.sommets[5].d_y),cv::Scalar(0,0,255),2);
+    cv::line(images_.at(1),cv::Point(h1.sommets[3].d_x,h1.sommets[3].d_y),cv::Point(h1.sommets[4].d_x,h1.sommets[4].d_y),cv::Scalar(0,0,255),2);
+    cv::line(images_.at(1),cv::Point(h1.sommets[2].d_x,h1.sommets[2].d_y),cv::Point(h1.sommets[3].d_x,h1.sommets[3].d_y),cv::Scalar(0,0,255),2);
+    cv::line(images_.at(1),cv::Point(h1.sommets[1].d_x,h1.sommets[1].d_y),cv::Point(h1.sommets[2].d_x,h1.sommets[2].d_y),cv::Scalar(0,0,255),2);
+}
     
 }
 void Graphics::DrawVehicles(float img_rows, float img_cols) {
@@ -88,12 +97,9 @@ void Graphics::DrawVehicles(float img_rows, float img_cols) {
 
         vehicle_manager_->checkVehicleInHexagons(*vehicle);
          
-    //cv::Mat roi = images_.at(1)(cv::circle(100, 100, 300, 300));
-   /* cv::Mat color(roi.size(), CV_8UC3, cv::Scalar(0, 125, 125)); 
-    double alpha = 0.3;
-    cv::addWeighted(color, alpha, roi, 1.0 - alpha , 0.0, roi); */
        cv::circle(images_.at(1),cv::Point((int)(position.x * img_cols),(int)(position.y * img_rows)),100,cv::Scalar(225,105,65),5);
        cv::circle(images_.at(1),cv::Point((int)(position.x * img_cols),(int)(position.y * img_rows)),15,color,-1);
+
         //cv::drawMarker(images_.at(1), cv::Point2d((int)(position.x * img_cols), (int)(position.y * img_rows)), color, vehicle->Shape(), 25, 15);
     }
 
