@@ -2,15 +2,16 @@
 #include "concurrent_object.h"
 #include <algorithm>
 
-namespace v2v {
+namespace v2v
+{
 
-std::mutex ConcurrentObject::mtx_;
+    std::mutex ConcurrentObject::mtx_;
 
-ConcurrentObject::~ConcurrentObject() {
+    ConcurrentObject::~ConcurrentObject()
+    {
 
-    std::for_each(threads.begin(), threads.end(), [](std::thread &t) {
-        t.join();
-    });
-}
+        std::for_each(threads.begin(), threads.end(), [](std::thread &t)
+                      { t.join(); });
+    }
 
-}  // namespace  v2v
+} // namespace  v2v

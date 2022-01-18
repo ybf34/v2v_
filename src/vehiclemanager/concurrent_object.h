@@ -7,20 +7,21 @@
 #include <thread>
 #include <vector>
 
-namespace  v2v {
+namespace v2v
+{
 
-class ConcurrentObject {
+  class ConcurrentObject
+  {
   public:
-    
     ~ConcurrentObject();
 
-    virtual void Simulate() {};
+    virtual void Simulate(){};
 
   protected:
     std::vector<std::thread> threads;
-    static std::mutex mtx_;          
-};
+    static std::mutex mtx_;
+  };
 
-}  // namespace  v2v
+} // namespace  v2v
 
-#endif  // CONCURRENT_OBJECT_H_
+#endif // CONCURRENT_OBJECT_H_

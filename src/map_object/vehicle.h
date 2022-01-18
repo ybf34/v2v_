@@ -11,15 +11,13 @@
 #include "mapping/coordinate.h"
 #include "mapping/route_model.h"
 
+namespace v2v
+{
 
-namespace  v2v {
-
-
-class Vehicle: public MapObject {
+  class Vehicle : public MapObject
+  {
   public:
-  
     Vehicle(double distance_per_cycle) : MapObject(distance_per_cycle) {}
-
 
     int PathIndex() { return path_index_; }
 
@@ -29,14 +27,13 @@ class Vehicle: public MapObject {
     void IncrementalMove();
     void IncrementPathIndex() { ++path_index_; }
     int radio_wave = 5;
+
   private:
-  
     void ResetPathAndIndex();
 
-    
     int path_index_ = 0;
-};
+  };
 
-} 
+}
 
-#endif  // VEHICLE_H_
+#endif // VEHICLE_H_

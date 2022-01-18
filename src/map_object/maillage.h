@@ -4,20 +4,21 @@
 #include "hexagone.h"
 #include "vehicle.h"
 #include <vector>
-namespace  v2v{
+namespace v2v
+{
 
-class Maillage{
+    class Maillage
+    {
 
     public:
-    int s,maxI,maxJ;
- 
-    Maillage(int s_,int maxi,int maxj) : hex_grid(20,std::vector<Hexagon>(20,Hexagon(0,0,0,0))),s(s_),maxI(maxi),maxJ(maxj) {}
+        int s, maxI, maxJ;
 
-    void createMaillage();
+        Maillage(int s_, int maxi, int maxj) : hex_grid(20, std::vector<Hexagon>(20, Hexagon(0, 0, 0, 0))), s(s_), maxI(maxi), maxJ(maxj) {}
 
-    std::vector<std::vector<Hexagon>> hex_grid;
-    
-};
+        void createMaillage();
+
+        std::vector<std::vector<Hexagon>> hex_grid;
+    };
 
 }
 
