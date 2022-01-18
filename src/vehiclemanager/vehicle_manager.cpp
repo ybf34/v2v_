@@ -1,6 +1,7 @@
 
 
 #include <memory>
+#include <algorithm>
 
 #include "vehiclemanager/vehicle_manager.h"
 #include "vehiclemanager/concurrent_object.h"
@@ -140,9 +141,8 @@ namespace v2v
 
                 bool inside = hex.InsideHexagon(x * 2358, y * 1322);
 
-                if (inside == true)
+                                if (inside == true)
                 {
-                    hex.marque();
                     hex.addVehicle(v);
                 }
                 else

@@ -34,11 +34,23 @@ namespace v2v
 
         void addVehicle(Vehicle v);
         void removeVehicle(Vehicle v);
+        bool hadVehicle(Vehicle v);
 
-        void marque() { marqueb = true; }
+        void marque()
+        {
+            marqueb = true;
+        }
         void unmarque() { marqueb = false; }
         int getX() { return center.d_x; }
         int getY() { return center.d_y; }
+
+        bool operator==(const Hexagon &obj2) const
+        {
+            if (this->i == obj2.i && this->j == obj2.j)
+                return true;
+            else
+                return false;
+        }
     };
 
 }

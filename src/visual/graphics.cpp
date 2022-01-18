@@ -76,7 +76,7 @@ namespace v2v
     void Graphics::DrawHexagon(Hexagon h1)
     {
 
-        if (h1.marqueb == false)
+        if (h1.vehicles.size() == 0)
         {
             cv::line(images_.at(1), cv::Point(h1.sommets[0].d_x, h1.sommets[0].d_y), cv::Point(h1.sommets[1].d_x, h1.sommets[1].d_y), cv::Scalar(0, 0, 0), 2);
             cv::line(images_.at(1), cv::Point(h1.sommets[5].d_x, h1.sommets[5].d_y), cv::Point(h1.sommets[0].d_x, h1.sommets[0].d_y), cv::Scalar(0, 0, 0), 2);

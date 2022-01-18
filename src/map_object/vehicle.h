@@ -27,6 +27,13 @@ namespace v2v
     void IncrementalMove();
     void IncrementPathIndex() { ++path_index_; }
     int radio_wave = 5;
+    bool operator==(const Vehicle &obj2) const
+    {
+      if (position_.x == obj2.position_.x && position_.y == obj2.position_.y)
+        return true;
+      else
+        return false;
+    }
 
   private:
     void ResetPathAndIndex();

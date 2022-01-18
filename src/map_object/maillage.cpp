@@ -19,4 +19,17 @@ namespace v2v
                 hex_grid[i][j].calculateVertices(s);
             }
     }
+    void v2v::Maillage::removeVehicleFromTheOtherHex(Vehicle v)
+    {
+        for (auto &line : this->hex_grid)
+        {
+            for (auto &hex : line)
+            {
+                if (hex.hadVehicle(v))
+                {
+                    hex.removeVehicle(v);
+                }
+            }
+        }
+    }
 }

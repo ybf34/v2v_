@@ -37,7 +37,26 @@ namespace v2v
     void Hexagon::removeVehicle(Vehicle v)
     {
         this->marqueb = false;
+
+        for (size_t i = 0; i < this->vehicles.size(); i++)
+        {
+            if (v == this->vehicles[i])
+            {
+            }
+        }
         this->vehicles.clear();
     }
 
+    bool Hexagon::hadVehicle(Vehicle v)
+    {
+        for (auto &vehicle : this->vehicles)
+        {
+            if (v == vehicle)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
