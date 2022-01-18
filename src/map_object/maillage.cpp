@@ -27,8 +27,8 @@ namespace v2v
             {
                 if (hex.hadVehicle(v))
                 {
-                    hex.removeVehicle(v);
                 }
+                hex.removeVehicle(v);
             }
         }
     }

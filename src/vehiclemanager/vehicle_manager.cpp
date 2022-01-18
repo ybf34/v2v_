@@ -141,13 +141,10 @@ namespace v2v
 
                 bool inside = hex.InsideHexagon(x * 2358, y * 1322);
 
-                                if (inside == true)
+                if (inside == true)
                 {
+                    this->maillage.removeVehicleFromTheOtherHex(v);
                     hex.addVehicle(v);
-                }
-                else
-                {
-                    hex.removeVehicle(v);
                 }
             }
         }

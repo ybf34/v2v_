@@ -101,9 +101,12 @@ namespace v2v
         for (auto const &[id, vehicle] : vehicle_manager_->Vehicles())
         {
             Coordinate position = vehicle->GetPosition();
+            Coordinate dest = vehicle->GetDestination();
 
             position.x = (position.x - min_lon_) / (max_lon_ - min_lon_);
             position.y = (max_lat_ - position.y) / (max_lat_ - min_lat_);
+            dest.x = (dest.x - min_lon_) / (max_lon_ - min_lon_);
+            dest.y = (max_lat_ - dest.y) / (max_lat_ - min_lat_);
 
             cv::Scalar color = cv::Scalar(vehicle->Blue(), vehicle->Green(), vehicle->Red());
 
@@ -111,6 +114,7 @@ namespace v2v
 
             cv::circle(images_.at(1), cv::Point((int)(position.x * img_cols), (int)(position.y * img_rows)), vehicle->radio_wave * 10, cv::Scalar(225, 105, 65), 2);
             cv::circle(images_.at(1), cv::Point((int)(position.x * img_cols), (int)(position.y * img_rows)), 17, color, -1);
+            cv::drawMarker(images_.at(1), cv::Point2d((int)(dest.x * img_cols), (int)(dest.y * img_rows)), color, 1, 25, 15);
         }
 
         float opacity = 0.85;

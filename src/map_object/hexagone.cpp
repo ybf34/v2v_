@@ -38,13 +38,19 @@ namespace v2v
     {
         this->marqueb = false;
 
-        for (size_t i = 0; i < this->vehicles.size(); i++)
+        for (size_t i = 1; i < this->vehicles.size(); i++)
         {
             if (v == this->vehicles[i])
             {
+                std::cout << this->vehicles.size();
+                this->vehicles.pop_back();
             }
         }
-        this->vehicles.clear();
+
+        if (this->vehicles.size() > 0)
+        {
+            this->vehicles.pop_back();
+        }
     }
 
     bool Hexagon::hadVehicle(Vehicle v)
